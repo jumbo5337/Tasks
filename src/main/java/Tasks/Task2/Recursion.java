@@ -4,25 +4,19 @@ import java.util.Arrays;
 
 public class Recursion {
 
-
-    public static void sort(int[] arr) {
-        if (arr.length > 1) {
-            myMergeSort(arr, 0, arr.length);
-        }
-    }
-
-
     // Сортировка Слиянием
-    public static void myMergeSort (int[] arr, int low, int hi){
+    public static void myMergeSort(int[] arr){
         if (arr.length==1){
             return;
         }
+        int low = 0;
+        int hi = arr.length;
         int middle = low+(hi-low)/2;
 
         int [] arrA = Arrays.copyOfRange(arr,0, middle);
         int [] arrB = Arrays.copyOfRange(arr, middle, hi);
-        myMergeSort(arrA, 0, arrA.length);
-        myMergeSort(arrB, 0 , arrB.length);
+        myMergeSort(arrA);
+        myMergeSort(arrB);
 
         int[] buff = myMergeAlg(arrA, arrB);
         System.arraycopy(buff, 0, arr, 0, arr.length);

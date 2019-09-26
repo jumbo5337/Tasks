@@ -8,13 +8,33 @@ public class Task2 {
 
         int[] arr={0,2,3,5,6,1,23,421,531,532,5234,123,3,4,2,1};
         int [] arr2={1,4,2,6,8,3,54,4,674,3,254,2143,23,4,5,1,23,2};
-        int [] arr3={1,2,12,2,3,6,5,3,1213,122,3,55,67,32,44,234,12};
-        Recursion.sort(arr);
-        Recursion.bubbleSort(arr3);
-        System.out.println(Recursion.sumRecursion(arr, arr.length-1));
-//        System.out.println(Recursion.binarySearch(arr, 5224));
-//        System.out.println(arr[15]);
-        System.out.println(Arrays.toString(arr));
+
+
+        System.out.println(Arrays.toString(arr) + " - До сортировки");
+        Recursion.bubbleSort(arr);
+        System.out.println(Arrays.toString(arr) + " - После сортировки");
+
+        System.out.println(Arrays.toString(arr2) + " - До сортировки");
+        Recursion.myMergeSort(arr2);
+        System.out.println(Arrays.toString(arr2) + " - После сортировки");
+
+        int mySum = Recursion.sumRecursion(arr, arr.length - 1);
+        int check = Arrays.stream(arr).sum();
+        System.out.println("Результаты суммирования :" + mySum + "\n" + "Суммирование стримами :" +check);
+        int[] arr3 = Recursion.myMergeAlg(arr, arr2);
+        System.out.println(Arrays.toString(arr) + " :Первый Массив \n" + Arrays.toString(arr) + " :Второй Массив \n"
+        +Arrays.toString(arr3) + " :Результат слияния");
+
+
+        System.out.println("Бинарный поиск элемента 54 в arr3 " + Recursion.binarySearch(arr3, 54)+ "\n" +
+                "Проверка : " + (54==arr3[Recursion.binarySearch(arr3, 54)]));
+
+        System.out.println("Факториал числа 5: " + Recursion.factorial(5));
+
+
+
+
+
 
 
 
