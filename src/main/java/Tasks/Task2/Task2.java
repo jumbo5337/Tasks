@@ -10,7 +10,6 @@ public class Task2 {
 
 
         Recursion.sort(arr,0,arr.length);
-        System.out.println(Arrays.toString(arr));
         int[] arr2={1,4,2,6,8,3,54,4,674,3,254,2143,23,4,5,1,23,2};
         int[] arr4={124,325,52,2,1};
 
