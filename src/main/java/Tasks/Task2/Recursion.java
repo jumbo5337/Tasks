@@ -94,7 +94,75 @@ public class Recursion {
         return -1;
     }
 
+   public static void quickSort (int[] arr){
+        if (arr.length<=1){
+            return;
+        }
+        quickSortAlg(arr, 0, arr.length-1);
+   }
+
+
+   private static void quickSortAlg (int[] arr, int low, int hi){
+        if (low+1>=hi){
+            return;
+        }
+        int middle= low+(hi-low)/2;
+        int base = arr[middle];
+        int i = low;
+        int j = hi;
+        while (i<=j){
+            while (arr[i]<base){
+                i++;
+            }
+            while (arr[j]>base){
+                j--;
+            }
+
+            if (i <= j) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
+            }
+        }
+       if (low < j)
+           quickSortAlg(arr, low, j);
+       if (hi > i)
+           quickSortAlg(arr, i, hi);
+   }
+
+
+    public static void sort(int[] arr, int low, int hi){
+        if(low+1>=hi){
+            return;
+        }
+        int middle=low+(hi-low)/2;
+        sort(arr, low,middle);
+        sort(arr, middle,hi);
+        merge(arr,low,middle,hi);
+    }
+
+    private static void merge (int[] arr, int low, int middle, int hi){
+        int i=low;
+        int j=middle;
+        int size=hi-low;
+        int[]buff=new int[size];
+
+
+            for(int k=0;k<buff.length;k++){
+                if (j >= hi || i < middle && arr[i]<arr[j]){
+                    buff[k]=arr[i++];
+                } else {
+                    buff[k]=arr[j++];
+                }
+            }
+
+        System.arraycopy(buff, 0, arr, low, size);
+
+    }
+
+   }
 
 
 
-}
