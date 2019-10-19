@@ -30,7 +30,8 @@ public class StringCounter {
                 .replace(",", "")
                 .replace(".", "")
                 .replace("(", "")
-                .replace(")", "");
+                .replace(")", "")
+                .replace("„", "");
 
     }
 
