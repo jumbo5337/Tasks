@@ -1,4 +1,4 @@
-package Tasks.task4;
+package tasks.task4;
 
 public class VectorCounter {
 

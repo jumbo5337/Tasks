@@ -1,9 +1,4 @@
-package Tasks.Tasks1;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
+package tasks.task1;
 
 public class Task1 {
     public static void main(String[] args) {

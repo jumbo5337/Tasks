@@ -1,7 +1,4 @@
-package Tasks.Task3;
-
-import java.util.*;
-import java.util.stream.Collectors;
+package tasks.task3;
 
 public class App {
     public static void main(String[] args) {

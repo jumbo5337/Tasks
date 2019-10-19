@@ -1,4 +1,4 @@
-package Tasks.Task2;
+package tasks.task2;
 
 import java.util.Arrays;
 import java.util.Random;

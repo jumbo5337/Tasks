@@ -1,6 +1,4 @@
-package Tasks.Task2;
-
-import java.util.Arrays;
+package tasks.task2;
 
 public class Recursion {
 

@@ -1,4 +1,4 @@
-package Tasks.Task2;
+package tasks.task2;
 
 public class OddEven {
 

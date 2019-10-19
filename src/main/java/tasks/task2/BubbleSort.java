@@ -1,7 +1,4 @@
-package Tasks.Task2;
-
-import java.time.LocalDateTime;
-import java.util.Date;
+package tasks.task2;
 
 public class BubbleSort {
 

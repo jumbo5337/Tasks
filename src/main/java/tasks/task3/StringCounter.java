@@ -1,4 +1,4 @@
-package Tasks.Task3;
+package tasks.task3;
 
 import java.util.Arrays;
 import java.util.HashMap;
